@@ -11,4 +11,4 @@ Diese Android-App macht das selbe, nur automatisiert.
 
 # Installation
 
-[APK-Datei]() herunterladen, die Option "Unbekannte Herkunft" aktivieren und App installieren
+[APK-Datei](https://github.com/rar0ch/ProntoRabatt/releases/download/v1.0/ProntoRabatt.apk) herunterladen, die Option "Unbekannte Herkunft" aktivieren und App installieren
