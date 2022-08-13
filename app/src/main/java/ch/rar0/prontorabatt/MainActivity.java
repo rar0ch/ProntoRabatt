@@ -9,6 +9,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -25,6 +26,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button downloadBtn = findViewById(R.id.downloadBtn);
+        downloadBtn.setOnClickListener(view -> downloadBon());
+        downloadBon();
+    }
+
+    public void downloadBon() {
         ConnectivityManager conManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = conManager.getActiveNetworkInfo();
         if (networkInfo!=null){ if (networkInfo.isConnected()){ Toast.makeText(MainActivity.this, getResources().getString(R.string.DownloadToast), Toast.LENGTH_LONG).show(); }
@@ -44,7 +51,12 @@ public class MainActivity extends AppCompatActivity {
                                 "(function() { return ('<html>'+document.getElementById('download').lastChild.href); })();",
                                 href -> {
                                     String downloadURL = href.replace("\\u003Chtml>", "").replace("\"", "");
-                                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(downloadURL)));
+                                    Uri.parse(downloadURL);
+                                    Intent objIntent = new Intent(Intent.ACTION_VIEW);
+                                    objIntent.setDataAndType(Uri.parse(downloadURL), "application/pdf");
+                                    objIntent.setFlags(Intent. FLAG_ACTIVITY_CLEAR_TOP);
+                                    startActivity(objIntent);
+                                    // startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(downloadURL)));
                                 }
                         );
                     }
@@ -52,5 +64,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 }
