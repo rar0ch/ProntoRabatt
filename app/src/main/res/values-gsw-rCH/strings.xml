@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ProntoRabatt</string>
+    <string name="DownloadButton">Bon abelade</string>
+    <string name="DownloadToast">Bon wird abeglade</string>
+    <string name="DownloadToastNoConnection">Kei Internetvrbindig</string>
+    <string name="ExplanationText">Die App ladet de Tankbon vo de Coop Newsletter-Site abe</string>
+</resources>

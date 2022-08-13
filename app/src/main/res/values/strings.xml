@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ProntoRabatt</string>
+    <string name="DownloadButton">Bon herunterladen</string>
+    <string name="DownloadToast">Bon wird heruntergeladen ...</string>
+    <string name="DownloadToastNoConnection">Keine Internetverbindung</string>
+    <string name="ExplanationText">Diese App lädt den Tankbon von der Coop Newsletter-Seite herunter</string>
+</resources>
